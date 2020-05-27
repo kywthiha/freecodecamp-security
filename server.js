@@ -9,13 +9,13 @@ var fs = require('fs');
 var path = require('path');
 const helmet = require('helmet')
 
-app.use(helmet.hidePoweredBy({ setTo: 'Java' }))
+app.use(helmet.hidePoweredBy({ setTo: 'Express' }))
 app.use(function(req, res, next) {
   res.set({
     "Access-Control-Allow-Origin" : "*",
     "Access-Control-Allow-Headers" : "Origin, X-Requested-With, content-type, Accept"
   });
-  // app.disable('x-powered-by');
+  app.disable('x-powered-by');
   next();
 });
 
