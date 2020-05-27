@@ -9,7 +9,7 @@ var fs = require('fs');
 var path = require('path');
 const helmet = require('helmet')
 
-app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }))
+app.use(helmet.hidePoweredBy({ setTo: 'Java' }))
 app.use(function(req, res, next) {
   res.set({
     "Access-Control-Allow-Origin" : "*",
